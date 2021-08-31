@@ -1,0 +1,40 @@
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*:focus {
+    outline: none;  
+    box-shadow: 0 0 0 0.8rem rgba($color-primary, 0.5);
+}
+html {
+    scroll-behavior: smooth;
+    //this is 10 px  =1 rem
+    font-size: 60%;
+
+
+    @include respond(phone) {
+        font-size: 50%;
+    }
+   
+    @include respond(tab-port ) {
+        font-size: 50%;
+    }
+   
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+   
+    @include respond(big-desktop) {
+        font-size: 60%;
+    }
+   
+
+}
+
+body{
+    box-sizing: border-box;
+}

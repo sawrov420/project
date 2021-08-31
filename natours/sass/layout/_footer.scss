@@ -1,0 +1,56 @@
+.footer{
+    grid-column-gap: 2.6rem;
+
+    &__logo-box{
+        grid-column: 1 / -1;
+        justify-self: center;
+        margin-bottom: 5.6rem;
+    }
+    &__logo{
+height: 9.4rem;
+    }
+
+    &__navigation{
+        border-top: 3px solid $color-primary-dark;
+        
+
+        ul{
+            list-style: none;
+            width: 100%;
+            margin-top: 1.5rem;
+            
+
+            li{
+                display: inline-block;
+                padding: 1rem 1.5rem;
+                
+                a{
+                    text-decoration: none;
+                    color: $color-primary-dark;
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    display: block;
+                    transition: all .3s ease-out;
+
+                    &:hover{
+                        background-color:$color-black;
+                        box-shadow: 1rem 1.5rem 3rem black;
+                       
+                        transform:skewY(-9deg);
+                    }
+                    
+                }
+            }
+        }
+    }
+    &__copyright{
+        border-top: 3px solid $color-primary-dark;
+
+        .copyright{
+            margin-top: 1.5rem;
+            font-size: 1.6rem;
+            font-weight: 400;
+            padding: 1rem 1.5rem;
+        }
+    }
+}

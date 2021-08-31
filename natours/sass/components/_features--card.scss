@@ -1,0 +1,28 @@
+.features--card {
+    gap: 2.4rem;
+    background-color: rgba($color-white, .8);
+    font-size: 1.5rem;
+    padding: 4.5rem 2.5rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    transition: all 0.3s ease-out;
+    backface-visibility: hidden;
+
+    &-icon {
+        display: inline-block;
+        width: 6rem;
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+      
+        
+
+    }
+
+    &-text {
+        text-align: center;
+    }
+    &:hover{
+        transform: translateY(-1.5rem) scale(1.03);
+        backface-visibility: hidden;
+    }
+}
+//features--card-icon

@@ -1,0 +1,148 @@
+.card{
+    //functionality for card
+
+    perspective: 150rem; //ai property ta use korle 3d animation ta buja jave je 3d hocce but aita use nah korle mone hobe kuno 3d effect hocce nah
+    position: relative;
+    height: 52rem; //same hight dite hove nahole height kaj korve nah
+  
+   &__side{
+    
+    height: 52rem; //same height
+    transition: all .8s ease-in;
+    color:white;
+    font-size: 2rem ;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%; //parents element ar same width nive;
+    backface-visibility: hidden; //aita rotate ar fole pisoner je onso dekha jai oita hidden kore dai ;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow:0 1.5rem 4rem rgba($color-black,.15) ;
+
+    &-front{
+        background-color: $color-white;
+        color: inherit;
+    }
+    &-back{
+        
+        transform: rotateY(180deg);
+        &-1{
+            background: linear-gradient(180deg,$color-secondary-dark,$color-secondary-light);
+        }
+        &-2{
+            background: linear-gradient(180deg,$color-primary-dark,
+            $color-primary-light);
+        }
+        &-3{
+            background: linear-gradient(180deg,$color-tertiary-dark,
+            $color-tertiary-light);
+        }
+    }
+   }
+   &:hover &__side-front{ //jokhon main card ke hover korbu tokhon just card ar child side_font div ta rotate hove;
+       transform: rotateY(-180deg);
+   }
+   &:hover &__side-back{ //aitau same but 2 ta child ar jonno 2 rokom man deua hoise jate tricks ta kaj kore;
+       transform: rotateY(0);
+   }
+
+   //front side style
+
+   &__picture{
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode:screen; // ai property use korle image and color dekha jai , aikhane alada bave gradienta ar color ar opacity komate hoi nah;
+
+    clip-path:polygon(0 0,100% 0,100% 85%,0 100%) ;
+
+    &-1{
+        background-image:linear-gradient(180deg,$color-secondary-dark,$color-secondary-light), url(../img/nat-5.jpg);
+    }
+    &-2{
+        background-image:linear-gradient(180deg,$color-primary-dark,$color-primary-light), url(../img/nat-6.jpg);
+    }
+    &-3{
+        background-image:linear-gradient(180deg,$color-tertiary-dark,$color-tertiary-light), url(../img/nat-7.jpg);
+    }
+}
+&__heading{
+    
+    font-size:2.8rem ;
+    font-weight:300 ;
+    color: $color-white;
+    text-transform: uppercase;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+    width: 74%;
+    
+}
+&__heading-span{
+    padding: 1rem 1.5rem;
+    box-decoration-break: clone; //aita dia padding ke 2ta line break a soman padding dite hoi;
+    &-1{
+        background-image:linear-gradient(to right bottom , rgba($color-secondary-light,.85),rgba($color-secondary-dark, .85))
+    }
+    &-2{
+        background-image:linear-gradient(to right bottom , rgba($color-primary-light,.85),rgba($color-primary-dark, .85))
+    }
+    &-3{
+        background-image:linear-gradient(to right bottom , rgba($color-tertiary-light,.85),rgba($color-tertiary-dark, .85))
+    }
+}
+
+&__details{
+    padding: 3rem;
+    
+    ul{
+        
+       list-style: none; 
+      width: 80%;
+      margin: 0 auto;
+
+       
+
+
+        li{
+            text-align: center;
+            font-size: 1.5rem;
+            padding:1rem ;
+
+            &:not(:last-child){
+                border-bottom:1px solid $color-grey-light-2 ;
+            }
+        }
+    }
+}
+
+//front side style
+
+//back side style
+
+&__cta{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    gap: 8rem;
+}
+&__price-box{
+    gap: 2rem;
+}
+
+&__price-only{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+&__price-value{
+    font-size: 6rem;
+    font-weight: 100;
+
+}
+
+}
+
+
+
